@@ -10,7 +10,7 @@ public class MainMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioManager.instansce.PlayMenuMusic();
     }
 
     // Update is called once per frame
@@ -22,6 +22,8 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         SceneManager.LoadScene(battleSelectScene);
+
+        AudioManager.instansce.PlaySFX(0);
     }
 
     public void QuitGame()
@@ -29,5 +31,7 @@ public class MainMenu : MonoBehaviour
         Application.Quit();
 
         Debug.Log("Quitting Game");
+
+        AudioManager.instansce.PlaySFX(0);
     }
 }

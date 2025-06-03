@@ -11,7 +11,7 @@ public class BattleSelectMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        AudioManager.instansce.PlayBattleSelectMusic();
     }
 
     // Update is called once per frame
@@ -23,5 +23,8 @@ public class BattleSelectMenu : MonoBehaviour
     public void SelectBattle()
     {
         SceneManager.LoadScene(levelToLoad);
+
+
+        AudioManager.instansce.PlaySFX(0);
     }
 }

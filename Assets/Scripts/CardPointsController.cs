@@ -56,6 +56,7 @@ public class CardPointsController : MonoBehaviour
                 playerCardPoints[i].activeCard.anim.SetTrigger("Attack");
 
 
+
                 yield return new WaitForSeconds(timeBetweenAttacks);
             }
 

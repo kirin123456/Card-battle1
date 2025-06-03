@@ -56,6 +56,8 @@ public class BattleController : MonoBehaviour
             currentPhase = TurnOrder.playerCardAttacks;
             AdvanceTurn();
         }
+
+        AudioManager.instansce.PlayBGM();
     }
 
     // Update is called once per frame
@@ -208,6 +210,8 @@ public class BattleController : MonoBehaviour
             UIDamageindicator damageClone = Instantiate(UIController.instance.playerDamage, UIController.instance.playerDamage.transform.parent);
             damageClone.damageText.text = damageAmount.ToString();
             damageClone.gameObject.SetActive(true);
+
+            AudioManager.instansce.PlaySFX(6);
         }
     }
 
@@ -230,6 +234,8 @@ public class BattleController : MonoBehaviour
             UIDamageindicator damageClone = Instantiate(UIController.instance.enemyDamage, UIController.instance.enemyDamage.transform.parent);
             damageClone.damageText.text = damageAmount.ToString();
             damageClone.gameObject.SetActive(true);
+
+            AudioManager.instansce.PlaySFX(5);
         }
     }
 
